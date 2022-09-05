@@ -10,9 +10,7 @@ headers = {"Content-Type": "application/json", "accept": "application/json"}
 
 app = FastAPI(title = "Grammarify", 
               description = "Grammatical Error Correction tool", 
-              version = "0.1", 
-              docs_url = "/vguides/docs",
-              redoc_url = "/vguides/redoc")
+              version = "0.1")
 
 async def check_grammar(payload):
     headers = {"Content-Type": "application/json", "accept": "application/json"}
