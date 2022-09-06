@@ -24,7 +24,7 @@ async def grammar_checker(text: str):
         if text.__len__() > 500:
             
             return JSONResponse(content = {"message": "Consider breaking the text into smaller sentences. Large sentences leads to incorrect predictions"})
-        predictions = await check_grammar(text)
+        predictions = await check_grammar({"text":text})
         json_compatible_item_data = jsonable_encoder({"result": predictions})
         return JSONResponse(content=json_compatible_item_data)
 
